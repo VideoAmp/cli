@@ -1,6 +1,7 @@
 # VideoAmp CLI
 
-```The VideoAmp CLI is provided by VideoAmp to streamline integration with its
+```
+The VideoAmp CLI is provided by VideoAmp to streamline integration with its
 APIs. This tool may be used to automate workflows, configurations and more.
 Detailed API specs can also be found at https://docs.videoamp.dev.
 
@@ -31,4 +32,5 @@ Flags:
 Additional help topics:
   videoamp                    
 
-Use "videoamp [command] --help" for more information about a command.```
+Use "videoamp [command] --help" for more information about a command.
+```
