@@ -10,7 +10,7 @@ RUN echo "Building for TARGETARCH: $TARGETARCH"
 
 # Install VideoAmp CLI
 # ref: https://github.com/VideoAmp/cli/releases/
-ARG VA_VER=0.0.30
+ARG VA_VER=0.0.39
 RUN wget "https://github.com/VideoAmp/cli/releases/download/v${VA_VER}/videoamp_${VA_VER}_linux_$TARGETARCH.tar.gz" --directory-prefix "/tmp/" && \
     tar zxvf /tmp/videoamp_${VA_VER}_linux_$TARGETARCH.tar.gz -C /tmp/ && \
     cp /tmp/videoamp /usr/local/bin/
