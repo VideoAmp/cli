@@ -5,7 +5,7 @@ The VideoAmp CLI is provided by VideoAmp to streamline integration with VideoAmp
 The CLI now features an MCP server that allows AI Chatbots, like Copilot and Claude, to interact with VideoAmp APIs.
 
 
-## AI Chatbot Quickstart
+## MCP Server Quickstart
 
 #### 1.) Launch Codespace
 [Create a Codespace](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=894753956) in the `videoamp/cli` repo.
