@@ -1,36 +1,26 @@
 # VideoAmp CLI
 
+The VideoAmp CLI is provided by VideoAmp to streamline integration with its APIs. This tool may be used to automate workflows, configurations and more. Detailed API specs can be found at https://docs.videoamp.dev.
+
+
+## Quickstart
+
+### 1.) Launch a new Codespace
+[Create a Codespace](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=894753956) in this repo.
+
+### 2.) Explore commands from the terminal
+
+##### discover available commands
+```shell
+videoamp --help
 ```
-The VideoAmp CLI is provided by VideoAmp to streamline integration with its
-APIs. This tool may be used to automate workflows, configurations and more.
-Detailed API specs can also be found at https://docs.videoamp.dev.
 
-Usage:
-  videoamp [flags]
-  videoamp [command]
+##### login
+```shell
+videoamp login
+```
 
-Available Commands:
-  audiences          
-  beta               try beta APIs
-  config             manage configuration
-  consents           
-  content            
-  currency-of-record 
-  datasource         get datasources
-  internal           use internal VA APIs. VPN required!
-  login              get an access_token
-  logout             
-  me                 get user info
-  measurements       
-  shares             
-  version            get version info
-
-Flags:
-      --config string   config file (default is $HOME/.videoamp/config.yaml)
-  -h, --help            help for videoamp
-
-Additional help topics:
-  videoamp                    
-
-Use "videoamp [command] --help" for more information about a command.
+##### list audiences
+```shell
+videoamp audiences list
 ```
