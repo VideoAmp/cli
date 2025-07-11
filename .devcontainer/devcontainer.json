@@ -27,7 +27,15 @@
 			"extensions": [
 				"GitHub.copilot",
                 "GitHub.copilot-chat"
-			]
+			],
+			"mcp": {
+				"servers": {
+					"videoamp": {
+						"command": "videoamp",
+						"args": ["mcp", "start-server"]
+					}
+				}
+			}
 		}
 	}
 
