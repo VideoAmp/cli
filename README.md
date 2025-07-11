@@ -11,7 +11,7 @@ The CLI now features an MCP server that allows AI Chatbots, like Copilot and Cla
 [Create a Codespace](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=894753956) in the `videoamp/cli` repo.
 
 #### 2.) Start MCP Server
-From withint the codespace in 1.) open .vscode/mcp.json & click `Start` above the "VideoAmp" server.
+From within the codespace in 1.) open .vscode/mcp.json & click `Start` above the "VideoAmp" server.
 
 #### 3.) Configure Copilot
 In the Copilot prompt select mode `Agent`. Note: It may be defaulted to `Ask`. Choose model `Claude Sonnet 4`.
