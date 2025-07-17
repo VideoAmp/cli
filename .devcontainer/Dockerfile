@@ -16,8 +16,4 @@ RUN wget "https://github.com/VideoAmp/cli/releases/download/v${VA_VER}/videoamp_
     cp /tmp/videoamp /usr/local/bin/
 
 # Install AWS CLI v2
-# ref: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
-RUN if [ "$TARGETARCH" = "amd64" ]; then AWS_CLI_ZIP="awscli-exe-linux-x86_64.zip"; elif [ "$TARGETARCH" = "arm64" ]; then AWS_CLI_ZIP="awscli-exe-linux-aarch64.zip"; fi && \
-    wget "https://awscli.amazonaws.com/${AWS_CLI_ZIP}"  --directory-prefix "/tmp/" && \
-    unzip "/tmp/${AWS_CLI_ZIP}" -d "/tmp/" && \
-    /tmp/aws/install
+RUN apk add --no-cache aws-cli
