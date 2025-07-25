@@ -17,6 +17,8 @@ From the codespace created in 1.) open file `.vscode/mcp.json` & click `Start` a
 
 #### 3. Configure Copilot
 In the Copilot prompt select mode `Agent`. Note: It may be defaulted to `Ask`. Choose model `Claude Sonnet 4` or higher.
+<img width="539" height="146" alt="image" src="https://github.com/user-attachments/assets/e370ab53-bd97-42ee-aa53-6410f742b97e" />
+
 
 #### 4. Explore VideoAmp Prompts
 In the Copilot prompt enter ```Show me example questions to ask VideoAmp.```
