@@ -12,6 +12,7 @@
 		"dockerfile": "Dockerfile"
 	},
 	"features": {
+		"ghcr.io/tailscale/codespace/tailscale": {}
 	},
 	"remoteEnv": {
 	},
