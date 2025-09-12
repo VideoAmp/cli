@@ -1,6 +1,6 @@
 # Use the base alpine image from Microsoft Dev Containers
 # ref: https://hub.docker.com/r/microsoft/vscode-devcontainers
-FROM mcr.microsoft.com/devcontainers/base:bookworm
+FROM mcr.microsoft.com/vscode/devcontainers/base:alpine
 
 # TARGETARCH used for multi-platform builds
 # assume either "amd64" (X86_64,Intel) or "arm64" (Mac M1,M2,M3)
