@@ -12,7 +12,7 @@ In the CHAT panel select mode `Agent` and a recent model, e.g. `Claude Sonnet 4.
 
 <img width="539" height="146" alt="image" src="https://github.com/user-attachments/assets/e370ab53-bd97-42ee-aa53-6410f742b97e" />
 
-3. Ask Copilot `What VideoAmp tools can I use?` or `Show questions I can ask VideoAmp.`" You should see a list of tools that map to VideoAmp APIs.
+3. Ask Copilot `What VideoAmp tools can I use?` or `Show questions I can ask VideoAmp.` You should see a list of tools that map to VideoAmp APIs.
 
 
 ---
