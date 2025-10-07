@@ -30,19 +30,12 @@ The VideoAmp CLI + MCP Server is intended to streamline workflows and integratio
 1. Create a Codespace using
 <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=894753956" target="_top">Create a Codespace</a>.
 
-2. Start VideoAmp MCP Server
-From inside the codespace created in 1.) open file `.vscode/mcp.json` & click `Start` above the "VideoAmp" server.
-
-<img width="558" height="358" alt="image" src="https://github.com/user-attachments/assets/6f94029b-cc40-4a13-8cb3-6bbc01fa0ab5" />
-
-
-3. Choose recent LLM Model
-In the Copilot prompt select mode `Agent`. Note: It may be defaulted to `Ask`. Choose model `Claude Sonnet 4.5`, `Chat GPT-5` or higher.
+2. Configure Copilot CHAT
+In the chat window select mode `Agent`. Note: It may be defaulted to `Ask`. Choose recent model `Claude Sonnet 4.5`, `Chat GPT-5` or higher versions.
 
 <img width="539" height="146" alt="image" src="https://github.com/user-attachments/assets/e370ab53-bd97-42ee-aa53-6410f742b97e" />
 
-
-4. Ask Copilot `What VideoAmp tools can I use?` or `Show questions I can ask VideoAmp." You should see a list of tools that map to VideoAmp APIs.
+3. Ask Copilot `What VideoAmp tools can I use?` or `Show questions I can ask VideoAmp." You should see a list of tools that map to VideoAmp APIs.
 
 
 ---

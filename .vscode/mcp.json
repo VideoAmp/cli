@@ -1,12 +1,8 @@
 {
-	"servers": {
-		"VideoAmp": {
-			"type": "stdio",
+    "servers": {
+		"videoamp": {
 			"command": "videoamp",
-			"args": [
-				"mcp",
-				"start-server"
-			]
+			"args": ["mcp", "start-server"]
 		}
 	}
 }
