@@ -4,7 +4,20 @@ The VideoAmp CLI + MCP Server is intended to streamline workflows and integratio
 
 ---
 
-## Installation
+## Copilot + MCP Demo
+1. <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=894753956" target="_top">Create a Codespace</a>.
+
+2. Configure Copilot CHAT
+In the CHAT panel select mode `Agent` and a recent model, e.g. `Claude Sonnet 4.5`, `Chat GPT-5` or higher.
+
+<img width="539" height="146" alt="image" src="https://github.com/user-attachments/assets/e370ab53-bd97-42ee-aa53-6410f742b97e" />
+
+3. Ask Copilot `What VideoAmp tools can I use?` or `Show questions I can ask VideoAmp.`" You should see a list of tools that map to VideoAmp APIs.
+
+
+---
+
+## Local MCP Installation
 1. Visit the [releases page](https://github.com/VideoAmp/cli/releases) and download the asset that matches your OS and CPU architecture (for example `videoamp_v0.10.0_linux_amd64.tar.gz`, `videoamp_v0.10.0_darwin_arm64.targ.gz`, or `videoamp_v0.10.0_windows_amd64.zip`).
 2. Extract the archive and move the `videoamp` executable somewhere on your `$PATH` (for example `/usr/local/bin` on macOS/Linux or `%USERPROFILE%\AppData\Local\Microsoft\WindowsApps` on Windows).
 	 - macOS/Linux:
@@ -23,27 +36,12 @@ The VideoAmp CLI + MCP Server is intended to streamline workflows and integratio
 	 videoamp --help
 	 ```
 
-
----
-
-## Copilot in Codespaces w/ Local MCP
-1. Create a Codespace using
-<a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=894753956" target="_top">Create a Codespace</a>.
-
-2. Configure Copilot CHAT
-In the chat window select mode `Agent`. Note: It may be defaulted to `Ask`. Choose recent model `Claude Sonnet 4.5`, `Chat GPT-5` or higher versions.
-
-<img width="539" height="146" alt="image" src="https://github.com/user-attachments/assets/e370ab53-bd97-42ee-aa53-6410f742b97e" />
-
-3. Ask Copilot `What VideoAmp tools can I use?` or `Show questions I can ask VideoAmp." You should see a list of tools that map to VideoAmp APIs.
-
-
 ---
 
 ## Claude Desktop w/ Local MCP
 To use the VideoAmp MCP server locally with Claude Desktop:
 
-1. Complete the [Installation](#installation) steps above.
+1. Complete the [Local MCP Installation](#installation) steps.
 2. Verify the server runs w/ out an error:
 ```bash
 videoamp mcp start-server
