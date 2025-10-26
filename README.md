@@ -19,6 +19,8 @@ The following steps require Claude Desktop and the maintenance of a MCP server r
 ### Mac(apple silicon)
 1. Download [VideoAmp-MCP-darwin-arm64.mcpb](https://github.com/VideoAmp/cli/releases/download/v0.34.0/VideoAmp-MCP-darwin-arm64.mcpb).
 2. Double-click the downloaded file.
+3. Click Install 
+<img width="802" height="269" alt="image" src="https://github.com/user-attachments/assets/b57340e2-11b5-44eb-9a43-cbe1b22eaa28" />
 3. Ask Copilot `What VideoAmp tools can I use?` or `Show questions I can ask VideoAmp.`
 
 ### Windows
