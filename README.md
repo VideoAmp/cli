@@ -17,7 +17,7 @@ The following steps will launch a codespace (virtual) machine and requests no in
 The following steps require Claude Desktop and the maintenance of a MCP server running locally.
 
 ### Mac(apple silicon)
-1. Download [VideoAmp-MCP-darwin-arm64.mcpb](./VideoAmp-MCP-darwin-arm64.mcpb).
+1. Download [VideoAmp-MCP-darwin-arm64.mcpb](https://github.com/VideoAmp/cli/releases/download/v0.34.0/VideoAmp-MCP-darwin-arm64.mcpb).
 2. Double-click the downloaded file.
 3. Ask Copilot `What VideoAmp tools can I use?` or `Show questions I can ask VideoAmp.`
 
