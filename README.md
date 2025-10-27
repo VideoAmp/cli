@@ -10,7 +10,7 @@ The following steps will launch a codespace (virtual) machine and requests no in
 1. <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=894753956" target="_top">Create a Codespace</a>.
 2. In Copilot, select mode `Agent` and a recent model, e.g. `Claude Sonnet 4.5`, `Chat GPT-5`.
 <img width="617" height="102" alt="image" src="https://github.com/user-attachments/assets/1673af7b-2642-4c12-9ebc-60413b852ffa" />
-4. Ask Copilot "What VideoAmp tools can I use?" or "Show questions I can ask VideoAmp."
+4. Ask Claude "What VideoAmp tools can I use?" or "Show questions I can ask VideoAmp."
   
 ---
   
