@@ -8,7 +8,7 @@ VideoAmp Tools includes both the VideoAmp MCP Server and CLI. All are intended t
 
 This option provides a ready-to-use development environment in the cloud via GitHub Codespaces, allowing interaction with VideoAmp tools through GitHub Copilot without needing any local installation.
 
-1. The user creates a [GitHub Codespace](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=894753956).
+1. Create a [GitHub Codespace](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=894753956).
 2. In Copilot, select mode `Agent` and a recent model, e.g. `Claude Sonnet 4.5`, `Chat GPT-5`.
 
    ![Copilot Agent Mode](https://github.com/user-attachments/assets/1673af7b-2642-4c12-9ebc-60413b852ffa)
@@ -36,7 +36,7 @@ graph LR
 
 **Server Location:** Inside the GitHub Codespace container
 
-**Authentication:** The user runs `videoamp login` within the Codespace terminal. The MCP server (using stdio transport) reads the stored access token from its configuration file within the Codespace environment to authenticate subsequent API calls made by tools.
+**Authentication:** Run `videoamp login` within the Codespace terminal. The MCP server (using stdio transport) reads the stored access token from its configuration file within the Codespace environment to authenticate subsequent API calls made by tools.
 
 ### Cons
 
