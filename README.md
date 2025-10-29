@@ -47,7 +47,7 @@ graph LR
 
 ## Claude Desktop (local install)
 
-This option allows users to connect the Claude Desktop application to a VideoAmp MCP server running locally on their machine. It allows users with the Claude Desktop installed locally to interact with VideoAmp tools via Claude, using a local instance of the VideoAmp MCP server.
+This option allows users to connect the Claude Desktop application to a VideoAmp MCP server running locally on their machine.
 
 ### Mac (Apple Silicon)
 
