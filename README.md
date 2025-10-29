@@ -9,11 +9,11 @@ VideoAmp Tools includes both the VideoAmp MCP Server and CLI. All are intended t
 This option provides a ready-to-use development environment in the cloud via GitHub Codespaces, allowing interaction with VideoAmp tools through GitHub Copilot without needing any local installation.
 
 1. Create a [GitHub Codespace](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=894753956).
-2. In Copilot, select mode `Agent` and a recent model, e.g. `Claude Sonnet 4.5`, `Chat GPT-5`.
+2. In Copilot, select mode `Agent` and a recent model, e.g., `Claude Sonnet 4.5`, `Chat GPT-5`.
 
    ![Copilot Agent Mode](https://github.com/user-attachments/assets/1673af7b-2642-4c12-9ebc-60413b852ffa)
 
-3. Ask Copilot "What VideoAmp tools can I use?" or "Show questions I can ask VideoAmp."
+3. Ask Copilot, "What VideoAmp tools can I use?" or "Show questions I can ask VideoAmp."
 
 ### Details
 
@@ -38,7 +38,7 @@ graph LR
 
 **Authentication:** Run `videoamp login` within the Codespace terminal. The MCP server (using stdio transport) reads the stored access token from its configuration file within the Codespace environment to authenticate subsequent API calls made by tools.
 
-### Cons
+### Prerequisites 
 
 * Requires a GitHub account
 * Relies on GitHub Copilot
@@ -57,7 +57,7 @@ This option allows users to connect the Claude Desktop application to a VideoAmp
 
    ![Claude Desktop Install](https://github.com/user-attachments/assets/b57340e2-11b5-44eb-9a43-cbe1b22eaa28)
 
-4. Ask Claude "What VideoAmp tools can I use?" or "Show questions I can ask VideoAmp."
+4. Ask Claude, "What VideoAmp tools can I use?" or "Show questions I can ask VideoAmp."
 
 ### Windows
 
@@ -86,11 +86,11 @@ graph LR
 
 **Authentication:** Relies on the user having previously logged in via the `videoamp login` command in their terminal. The locally running MCP server (using stdio transport) reads the stored access token from the user's local CLI configuration file to authenticate API calls.
 
-### Cons
+### Prerequisites
 
 * Requires installing Claude Desktop.
 * Requires downloading and installing the appropriate .mcpb file.
-* Requires the user to manage their videoamp CLI login state separately via a terminal.
+* Requires the user to manage their VideoAmp CLI login state separately via a terminal.
 * The MCP server process runs locally, so ensuring the correct version is the user's responsibility.
 * Only available for macOS (Apple Silicon) initially, Windows "coming soon".
 
@@ -123,11 +123,10 @@ graph LR
 
 **Authentication:** TBD
 
-### Cons
+### Prerequisites
 
-* Requires a stable, remotely hosted, and accessible MCP server instance (i.e. setup, maintenance, potential costs, and security considerations).
+* Requires a stable, remotely hosted, and accessible MCP server instance (i.e., setup, maintenance, potential costs, and security considerations).
 * Depends on Anthropic's implementation within Claude.ai for MCP connectivity and secure token management.
-* Potentially less responsive than local options due to network latency between Claude.ai and the remote MCP server.
 * May require a paid Claude.ai subscription.
 
 ---
@@ -136,7 +135,7 @@ graph LR
 
 This option describes how to install the videoamp executable locally for direct use from a command line terminal.
 
-1. Visit the [releases page](https://github.com/VideoAmp/cli/releases) and download the asset that matches your OS and CPU architecture (for example `videoamp_v0.10.0_linux_amd64.tar.gz`, `videoamp_v0.10.0_darwin_arm64.tar.gz`, or `videoamp_v0.10.0_windows_amd64.zip`).
+1. Visit the [releases page](https://github.com/VideoAmp/cli/releases) and download the asset that matches your OS and CPU architecture (for example, `videoamp_v0.10.0_linux_amd64.tar.gz`, `videoamp_v0.10.0_darwin_arm64.tar.gz`, or `videoamp_v0.10.0_windows_amd64.zip`).
 
 2. Extract the archive and move the `videoamp` executable somewhere on your `$PATH`:
 
