@@ -34,7 +34,7 @@ graph LR
 
 **Client Location:** GitHub Copilot
 
-**Server Location:** Inside the GitHub Codespace container
+**Server Location:** GitHub Codespace
 
 **Authentication:** Run `videoamp login` within the Codespace terminal. The MCP server (using stdio transport) reads the stored access token from its configuration file within the Codespace environment to authenticate subsequent API calls made by tools.
 
