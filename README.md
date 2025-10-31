@@ -70,7 +70,7 @@ graph LR
     subgraph UserMachine [User's Local Machine]
         ClaudeDesktop[Claude Desktop App]
         MCPServer[videoamp mcp start-server --transport stdio]
-        CLIConfig[CLI Config File w/ Token]
+        ConfigFile[~/.videoamp/config.yaml]
 
         ClaudeDesktop -- launches & stdio comms --> MCPServer
         MCPServer -- reads --> CLIConfig
