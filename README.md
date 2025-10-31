@@ -22,7 +22,7 @@ graph LR
     subgraph Cloud [GitHub Codespace Container]
         Copilot[GitHub Copilot Agent Mode]
         MCPServer[videoamp mcp start-server --transport stdio]
-        CLIConfig[CLI Config File w/ Token]
+        ConfigFile[~/.videoamp/config.yaml]
 
         Copilot -- stdio --> MCPServer
         MCPServer -- reads --> CLIConfig
