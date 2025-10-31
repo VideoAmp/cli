@@ -28,7 +28,7 @@ graph LR
         MCPServer -- reads --> ConfigFile
     end
 
-    User[User via VS Code] --> Copilot
+    User--> Copilot
     MCPServer -- HTTP/gRPC --> VideoAmpAPI[VideoAmp Public API]
 ```
 
