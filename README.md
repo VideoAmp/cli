@@ -172,6 +172,6 @@ graph LR
 
 **Server Location:** N/A - CLI communicates directly with VideoAmp APIs.
 
-**Authentication:** The user runs `videoamp login` in the terminal. The CLI stores and uses the obtained access token from its configuration file for subsequent API calls.
+**Authentication:** User runs `videoamp login` in the terminal. The CLI manages the `access_token` in ~/.videoamp/config.yaml.
 
 ---
