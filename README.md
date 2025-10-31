@@ -25,7 +25,7 @@ graph LR
         ConfigFile[~/.videoamp/config.yaml]
 
         Copilot -- stdio --> MCPServer
-        MCPServer -- reads --> CLIConfig
+        MCPServer -- reads --> ConfigFile
     end
 
     User[User via VS Code] --> Copilot
