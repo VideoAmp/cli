@@ -119,7 +119,7 @@ graph LR
 
 **Client Location:** The Claude.ai web application running in the user's browser.
 
-**Server Location:** A remote server hosted by VideoAmp.
+**Server Location:** Remote server hosted at `https://api.videoamp.dev`
 
 **Authentication:** TBD
 
