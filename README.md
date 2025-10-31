@@ -170,7 +170,7 @@ graph LR
 
 **Client Location:** The user's terminal or an automation script running on the user's machine.
 
-**Server Location:** N/A - The CLI communicates directly with VideoAmp APIs without an MCP server layer.
+**Server Location:** N/A - CLI communicates directly with VideoAmp APIs.
 
 **Authentication:** The user runs `videoamp login` in the terminal. The CLI stores and uses the obtained access token from its configuration file for subsequent API calls.
 
