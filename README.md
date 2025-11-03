@@ -36,7 +36,7 @@ graph LR
 
 **Server Location:** GitHub Codespace
 
-**Authentication:** Run `videoamp login` within the Codespace terminal. The MCP server (using stdio transport) reads the stored access token from its configuration file within the Codespace environment to authenticate subsequent API calls made by tools.
+**Authentication:** If needed, run `videoamp login` within the Codespace terminal (login may occur automatically). The MCP server (using stdio transport) reads the stored access token from its configuration file within the Codespace environment to authenticate subsequent API calls made by tools.
 
 ### Prerequisites 
 
