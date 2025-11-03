@@ -73,7 +73,7 @@ graph LR
         ConfigFile[~/.videoamp/config.yaml]
 
         ClaudeDesktop -- launches & stdio comms --> MCPServer
-        MCPServer -- reads --> CLIConfig
+        MCPServer -- reads --> ConfigFile
     end
 
     User --> ClaudeDesktop
