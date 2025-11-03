@@ -32,7 +32,7 @@ graph LR
     MCPServer -- HTTP/gRPC --> VideoAmpAPI[VideoAmp Public API]
 ```
 
-**Client Location:** GitHub Copilot
+**Client Location:** GitHub Codespace
 
 **Server Location:** GitHub Codespace
 
