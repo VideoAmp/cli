@@ -47,11 +47,8 @@ graph LR
 
 ## Claude Desktop (local install)
 
-This option allows users to connect the Claude Desktop application to a VideoAmp MCP server running locally on their machine.
-
-### Mac (Apple Silicon)
-
-1. Download [VideoAmp-MCP-darwin-arm64.mcpb](https://github.com/VideoAmp/cli/releases/download/v0.34.0/VideoAmp-MCP-darwin-arm64.mcpb).
+### Mac(apple silicon)
+1. Download [VideoAmp-MCP-darwin-arm64.mcpb](https://github.com/VideoAmp/cli/releases/download/v0.43.1/VideoAmp-MCP-darwin-arm64.mcpb).
 2. Double-click the downloaded file.
 3. Click Install.
 
