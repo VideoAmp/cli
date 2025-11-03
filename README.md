@@ -93,41 +93,6 @@ graph LR
 
 ---
 
-## Claude.ai (remote MCP) (WIP)
-
-This option would allow users to interact with VideoAmp tools directly from the Claude.ai web interface by connecting to a remotely hosted VideoAmp MCP server. Does not exist yet, but is coming soon.
-
-### Details
-
-```mermaid
-graph LR
-    subgraph UserBrowser [User's Browser]
-        ClaudeAI[Claude.ai Web App]
-    end
-
-    subgraph RemoteInfra [Remote Infrastructure]
-        MCPServer[videoamp mcp start-server --transport http]
-    end
-
-    User --> ClaudeAI
-    ClaudeAI -- HTTP MCP Request (Auth?) --> MCPServer
-    MCPServer -- HTTP/gRPC --> VideoAmpAPI[VideoAmp Public API]
-```
-
-**Client Location:** The Claude.ai web application running in the user's browser.
-
-**Server Location:** Remote server hosted at `https://api.videoamp.dev`
-
-**Authentication:** TBD
-
-### Prerequisites
-
-* Requires a stable, remotely hosted, and accessible MCP server instance (i.e., setup, maintenance, potential costs, and security considerations).
-* Depends on Anthropic's implementation within Claude.ai for MCP connectivity and secure token management.
-* May require a paid Claude.ai subscription.
-
----
-
 ## General CLI Installation
 
 This option describes how to install the videoamp executable locally for direct use from a command line terminal.
