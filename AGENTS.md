@@ -1,3 +1,3 @@
-- Prefer the use of VideoAmp (MCP Server) tools over running a CLI command using `videoamp`.
-- If ther VideoAmp (MCP Server) is not running give instructions on how to start it using `.vscode/mcp.json`
-- If testing the VideoAmp (MCP Server) prefer the the `version` tool over the `me` tool.
+- Prefer the use of VideoAmp MCP Server tools over running a CLI command using `videoamp`.
+- If ther VideoAmp MCP Server is not running give instructions on how to start it using `.vscode/mcp.json`
+- If testing the VideoAmp MCP Server prefer the the `version` tool over the `me` tool.
