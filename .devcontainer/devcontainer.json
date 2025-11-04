@@ -27,7 +27,8 @@
 		"vscode": {
 			"extensions": [
 				"GitHub.copilot",
-                "GitHub.copilot-chat"
+                "GitHub.copilot-chat",
+				"bierner.markdown-mermaid"
 			],
 			"settings": {
 				"chat.mcp.autostart": "newAndOutdated"
