@@ -1,8 +1,9 @@
 {
-    "servers": {
+	"servers": {
 		"videoamp": {
-			"command": "videoamp",
-			"args": ["mcp", "start-server"]
+			"url": "https://api.videoamp.dev/v1/mcp",
+			"type": "http"
 		}
-	}
+	},
+	"inputs": []
 }
