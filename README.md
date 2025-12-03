@@ -1,47 +1,43 @@
 # VideoAmp Tools
 
-VideoAmp Tools includes both the VideoAmp MCP Server and CLI. All are intended to streamline workflows and integrations with VideoAmp's APIs. Detailed API specs can be found at https://docs.videoamp.dev.
+Tools are available via the VideoAmp MCP Server and CLI.  All tools are intended to streamline workflows and integrations with VideoAmp's APIs. Detailed API specs can be found at https://docs.videoamp.dev.
 
 ---
 
-## Copilot + Codespace (zero install)
+## Copilot (remote server, zero install)
 
-This option provides a ready-to-use development environment in the cloud via GitHub Codespaces, allowing interaction with VideoAmp tools through GitHub Copilot without needing any local installation.
+This option launches a GitHub Codespace with Copilot connected to the remote VideoAmp MCP Server and requires zero local installation.  The CLI may also be accessed using the command `videoamp` from a terminal.
 
 1. Create a [GitHub Codespace](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=894753956).
 2. In Copilot, select mode `Agent` and a recent model, e.g., `Claude Sonnet 4.5`, `Chat GPT-5`.
 
    ![Copilot Agent Mode](https://github.com/user-attachments/assets/1673af7b-2642-4c12-9ebc-60413b852ffa)
 
-3. Ask Copilot, "What VideoAmp tools can I use?" or "Show questions I can ask VideoAmp."
+3. Prompt Copilot: "Show videoamp audiences I can access." or "What other VideoAmp tools can I use?"
 
 ### Details
 
 ```mermaid
 graph LR
-    subgraph Cloud [GitHub Codespace Container]
+    subgraph Cloud [GitHub Codespace]
         Copilot[GitHub Copilot Agent Mode]
-        MCPServer[videoamp mcp start-server --transport stdio]
-        ConfigFile[~/.videoamp/config.yaml]
-
-        Copilot -- stdio --> MCPServer
-        MCPServer -- reads --> ConfigFile
+        
     end
-
     User--> Copilot
-    MCPServer -- HTTP/gRPC --> VideoAmpAPI[VideoAmp Public API]
+    Copilot -- http --> MCPServer[remote server https://api.videoamp.dev/v1/mcp]
+    MCPServer -- http --> VideoAmpAPI[VideoAmp Public API https://api.videoamp.dev/*]
 ```
 
-**Client Location:** GitHub Codespace
+**Client Location:** Copilot in GitHub Codespace
 
-**Server Location:** GitHub Codespace
+**Server Location:** https://api.videoamp.dev/v1/mcp
 
-**Authentication:** If needed, run `videoamp login` within the Codespace terminal (login may occur automatically). The MCP server (using stdio transport) reads the stored access token from its configuration file within the Codespace environment to authenticate subsequent API calls made by tools.
+**Authentication:** VideoAmp OAuth login
 
 ### Prerequisites 
 
-* Requires a GitHub account
-* Relies on GitHub Copilot
+* GitHub account
+* GitHub Copilot access
 
 ---
 
