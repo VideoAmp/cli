@@ -1,99 +1,99 @@
 # VideoAmp Tools
 
-Tools are available via the VideoAmp MCP Server and CLI.  All tools are intended to streamline workflows and integrations with VideoAmp's APIs. Detailed API specs can be found at https://docs.videoamp.dev.
+VideoAmp tools are available via an MCP or CLI interface and expose the same capabilities available in the [VideoAmp public API](https://docs.videoamp.dev). The use of tools are intended to streamline workflows and integrations with APIs. 
 
 ---
 
-## Copilot (remote server, zero install)
+# MCP Getting Started
 
-This option launches a GitHub Codespace with Copilot connected to the remote VideoAmp MCP Server and requires zero local installation.  The CLI may also be accessed using the command `videoamp` from a terminal.
+AI assistants, agents and chatbots compatible with the [MCP protocol](https://modelcontextprotocol.io/docs/getting-started/intro) may use the remote MCP server at `https://api.videoamp.dev/v1/mcp`.
+
+After connecting to the MCP server using one of the below [MCP Configuration Options](#mcp-configuration-options), try these sample prompts:
+
+* "Show me tools I can use with VideoAmp"
+* "List audiences available to me"
+* "What campaigns do I have access to?"
+* "Help me understand VideoAmp capabilities"
+
+---
+
+# MCP Configuration Options
+
+## Claude Desktop with Remote Server
+This option enables use of the remote MCP server through Claude Desktop without requiring local installation.
+
+1. Open Claude Desktop and list available connectors using Manage Connectors, under the tools menu.
+2. Connect the VideoAmp MCP server.
+
+### Prerequisites
+* [Claude Desktop](https://claude.com/download)
+* Pro, Max, Team, or Enterprise license
+* The remote server at `https://api.videoamp.dev/v1/mcp` has been added as a [Custom Connector](https://support.claude.com/en/articles/11175166-getting-started-with-custom-connectors-using-remote-mcp) (Admin privileges may be needed)
+
+---
+
+## Claude Web with Remote Server
+This option enables use of the remote MCP server through the Claude web interface without requiring local installation.
+
+1. Open [Claude.ai](https://claude.ai) and list available connectors using Manage Connectors, under the tools menu.
+2. Connect the VideoAmp MCP server.
+
+### Prerequisites
+* Pro, Max, Team, or Enterprise license
+* The remote server at `https://api.videoamp.dev/v1/mcp` has been added as a [Custom Connector](https://support.claude.com/en/articles/11175166-getting-started-with-custom-connectors-using-remote-mcp) (Admin privileges may be needed)
+
+---
+
+## Claude Code with Remote Server
+This option enables use of the remote MCP server through Claude Code without requiring local installation.
+
+1. Add the MCP server from the terminal using
+```bash
+claude mcp add --transport http VideoAmp https://api.videoamp.dev/v1/mcp
+```
+
+### Prerequisites
+* [Claude Code](https://claude.com/product/claude-code)
+
+---
+
+## Codespace with Remote Server
+This option provides a complete development environment with Copilot connected to the remote MCP server. No additional installation is required, and the CLI can be accessed using the `videoamp` command from a terminal.
 
 1. Create a [GitHub Codespace](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=894753956).
 2. In Copilot, select mode `Agent` and a recent model, e.g., `Claude Sonnet 4.5`, `Chat GPT-5`.
 
-   ![Copilot Agent Mode](https://github.com/user-attachments/assets/1673af7b-2642-4c12-9ebc-60413b852ffa)
+   <img src="https://github.com/user-attachments/assets/1673af7b-2642-4c12-9ebc-60413b852ffa" alt="Copilot Agent Mode" width="400">
 
-3. Prompt Copilot: "Show videoamp audiences I can access." or "What other VideoAmp tools can I use?"
-
-### Details
-
-```mermaid
-graph LR
-    subgraph Cloud [GitHub Codespace]
-        Copilot[GitHub Copilot Agent Mode]
-        
-    end
-    User--> Copilot
-    Copilot -- http --> MCPServer[remote server https://api.videoamp.dev/v1/mcp]
-    MCPServer -- http --> VideoAmpAPI[VideoAmp Public API https://api.videoamp.dev/*]
-```
-
-**Client Location:** Copilot in GitHub Codespace
-
-**Server Location:** https://api.videoamp.dev/v1/mcp
-
-**Authentication:** VideoAmp OAuth login
-
-### Prerequisites 
-
+### Prerequisites
 * GitHub account
 * GitHub Copilot access
 
 ---
 
-## Claude Desktop (local install)
+## Claude Desktop with Local Server
+This option provides a local MCP server instance that runs on your machine and connects to Claude Desktop.
 
-### Mac(apple silicon)
+### Mac
 1. Download [VideoAmp-MCP-darwin-arm64.mcpb](https://github.com/VideoAmp/cli/releases/download/v0.43.1/VideoAmp-MCP-darwin-arm64.mcpb).
 2. Double-click the downloaded file.
 3. Click Install.
 
-   ![Claude Desktop Install](https://github.com/user-attachments/assets/b57340e2-11b5-44eb-9a43-cbe1b22eaa28)
-
-4. Ask Claude, "What VideoAmp tools can I use?" or "Show questions I can ask VideoAmp."
-
-### Windows
-
-1. Coming soon.
-
-### Details
-
-```mermaid
-graph LR
-    subgraph UserMachine [User's Local Machine]
-        ClaudeDesktop[Claude Desktop App]
-        MCPServer[videoamp mcp start-server --transport stdio]
-        ConfigFile[~/.videoamp/config.yaml]
-
-        ClaudeDesktop -- launches & stdio comms --> MCPServer
-        MCPServer -- reads --> ConfigFile
-    end
-
-    User --> ClaudeDesktop
-    MCPServer -- HTTP/gRPC --> VideoAmpAPI[VideoAmp Public API]
-```
-
-**Client Location:** Anthropic's Claude Desktop application running on the user's local machine.
-
-**Server Location:** The `videoamp mcp start-server --transport stdio` process runs locally on the user's machine, launched by Claude Desktop.
-
-**Authentication:** Relies on the user having previously logged in via the `videoamp login` command in their terminal. The locally running MCP server (using stdio transport) reads the stored access token from the user's local CLI configuration file to authenticate API calls.
+   <img src="https://github.com/user-attachments/assets/b57340e2-11b5-44eb-9a43-cbe1b22eaa28" alt="Claude Desktop Install" width="400">
 
 ### Prerequisites
+* [Claude Desktop](https://claude.com/download)
 
-* Requires installing Claude Desktop.
-* Requires downloading and installing the appropriate .mcpb file.
-* Requires the user to manage their VideoAmp CLI login state separately via a terminal.
-* The MCP server process runs locally, so ensuring the correct version is the user's responsibility.
-* Only available for macOS (Apple Silicon) initially, Windows "coming soon".
+### Windows
+Coming soon.
 
 ---
 
-## General CLI Installation
+## CLI Installation
 
-This option describes how to install the videoamp executable locally for direct use from a command line terminal.
+This option provides the `videoamp` executable for local installation and use from a terminal or automated process.  Additionally this allows the MCP server to be run locally using the `videoamp mcp` CLI interface.
 
-1. Visit the [releases page](https://github.com/VideoAmp/cli/releases) and download the asset that matches your OS and CPU architecture (for example, `videoamp_v0.10.0_linux_amd64.tar.gz`, `videoamp_v0.10.0_darwin_arm64.tar.gz`, or `videoamp_v0.10.0_windows_amd64.zip`).
+1. Visit the [releases page](https://github.com/VideoAmp/cli/releases) and download the asset that matches your OS and CPU architecture (for example, `videoamp_v0.43.1_linux_amd64.tar.gz`, `videoamp_v0.43.1_darwin_arm64.tar.gz`, or `videoamp_v0.43.1_windows_amd64.zip`).
 
 2. Extract the archive and move the `videoamp` executable somewhere on your `$PATH`:
 
@@ -117,19 +117,5 @@ This option describes how to install the videoamp executable locally for direct 
    ```bash
    videoamp --help
    ```
-
-### Details
-
-```mermaid
-graph LR
-    User[User / Script] -- runs --> CLI[videoamp CLI]
-    CLI -- HTTP/gRPC --> VideoAmpAPI[VideoAmp Public API]
-```
-
-**Client Location:** The user's terminal or an automation script running on the user's machine.
-
-**Server Location:** N/A - CLI communicates directly with VideoAmp APIs.
-
-**Authentication:** User runs `videoamp login` in the terminal. The CLI manages the `access_token` in ~/.videoamp/config.yaml.
 
 ---
