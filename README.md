@@ -71,24 +71,6 @@ This option provides a complete development environment with Copilot connected t
 
 ---
 
-## Claude Desktop with Local Server
-This option provides a local MCP server instance that runs on your machine and connects to Claude Desktop.
-
-### Mac
-1. Download [VideoAmp-MCP-darwin-arm64.mcpb](https://github.com/VideoAmp/cli/releases/download/v0.43.1/VideoAmp-MCP-darwin-arm64.mcpb).
-2. Double-click the downloaded file.
-3. Click Install.
-
-   <img src="https://github.com/user-attachments/assets/b57340e2-11b5-44eb-9a43-cbe1b22eaa28" alt="Claude Desktop Install" width="400">
-
-### Prerequisites
-* [Claude Desktop](https://claude.com/download)
-
-### Windows
-Coming soon.
-
----
-
 ## CLI Installation
 
 This option provides the `videoamp` executable for local installation and use from a terminal or automated process.  Additionally this allows the MCP server to be run locally using the `videoamp mcp` CLI interface.
